@@ -117,5 +117,28 @@ function gameObject(){
      }   
  }
 
-console.log(gameObject());
+ const game = gameObject();
+
+ const getPlayerStats = playerName => {
+   if (game.home.players[playerName]) {
+    return game.home.players[playerName]} 
+   else{ 
+     return game.away.players[playerName]}
+   }
+ 
+ const teamColors = teamName => {
+   if (game.home.teamName) {
+     return game.home.colors }
+   else{
+     return game.away.colors
+   }
+   }
+ 
+ const teamNames = game => [game.home.teamName, game.away.teamName]
+ 
+ const numPointsScored = (playerName) => getPlayerStats(playerName).points
+ 
+ const shoeSize = (playerName) => getPlayerStats(playerName).shoe
+ 
+ ;
 
